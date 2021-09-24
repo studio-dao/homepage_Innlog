@@ -3,6 +3,8 @@
     <Header/>
     <SectionIntro/>
     <SectionExpertise/>
+    <SectionSolutions/>
+    <Footer/>
   </div>
 </template>
 
@@ -10,13 +12,17 @@
 import Header from "./components/header.vue";
 import SectionIntro from "./components/SectionIntro.vue"
 import SectionExpertise from "./components/SectionExpertise.vue"
+import SectionSolutions from "./components/SectionSolutions.vue"
+import Footer from "./components/footer.vue"
 
 export default {
   name: "App",
   components: {
     Header,
     SectionIntro,
-    SectionExpertise
+    SectionExpertise,
+    SectionSolutions,
+    Footer
   },
 };
 </script>

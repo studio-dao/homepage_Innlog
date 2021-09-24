@@ -67,14 +67,17 @@ $font2: "Helvetica";
     grid-column: 6/12;
     padding-top: 10px;
     padding-left: 50px;
+    align-items: center;
     .separateur {
+      margin-bottom: 20px;
       background-color: $color1;
       width: 50px;
-      height: 3px;
+      height: 5px;
     }
     .title {
-      max-width: 300px;
-      padding: 20px 0px;
+      margin-bottom: 20px;
+      max-width: 500px;
+      line-height: 50px;
       font-family: $font2;
       font-weight: bold;
       font-size: 3em;
@@ -96,8 +99,7 @@ $font2: "Helvetica";
   .CTA {
     display: grid;
     margin: 50px 0px;
-    padding: 10px 0px;
-    height: 30px;
+    padding: 10px;
     grid-column: 4/8;
     font-family: "Helvetica";
     font-weight: bold;
