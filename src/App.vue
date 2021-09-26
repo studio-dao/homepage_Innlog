@@ -4,6 +4,7 @@
     <SectionIntro/>
     <SectionExpertise/>
     <SectionSolutions/>
+    <SectionVousNous/>
     <Footer/>
   </div>
 </template>
@@ -14,6 +15,7 @@ import SectionIntro from "./components/SectionIntro.vue"
 import SectionExpertise from "./components/SectionExpertise.vue"
 import SectionSolutions from "./components/SectionSolutions.vue"
 import Footer from "./components/footer.vue"
+import SectionVousNous from "./components/SectionVousNous.vue"
 
 export default {
   name: "App",
@@ -22,7 +24,9 @@ export default {
     SectionIntro,
     SectionExpertise,
     SectionSolutions,
-    Footer
+    Footer,
+    SectionVousNous
+    
   },
 };
 </script>

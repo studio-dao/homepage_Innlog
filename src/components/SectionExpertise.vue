@@ -109,12 +109,8 @@ export default {
 $color1: #0078b5;
 $color2: white;
 $color3: black;
-$font1: "Courier New", Courier, monospace;
 $font2: "Helvetica";
-@font-face {
-  font-family: "Couture";
-  src: url("../assets/fonts/couture-bld.otf");
-}
+
 
 .main_container_expertise {
   display: grid;
@@ -213,12 +209,15 @@ $font2: "Helvetica";
     text-align: left;
     color: $color2;
     font-family: "Helvetica";
-    font-weight: 100;
+    font-weight: lighter;
   }
 
   h1 {
     max-width: 300px;
+    font-family: $font2;
     font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 2px;
   }
 }
 </style>

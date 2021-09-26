@@ -22,7 +22,7 @@
         </p>
       </a>
     </div>
-    <div class="CTA">DÉCOUVRIR LA MÉTHODE INNLOG</div>
+    <div class="CTA"><a href="#">DÉCOUVRIR LA MÉTHODE INNLOG</a></div>
   </div>
 </template>
 
@@ -31,29 +31,22 @@ export default {
   name: "SectionIntro",
 
   data() {
-    return {
-      
-    };
+    return {};
   },
-
 };
 </script>
 
 <style scoped lang="scss">
+// VARIABLES
 $color1: #0078b5;
 $color2: white;
 $color3: black;
-$font1: "Courier New", Courier, monospace;
 $font2: "Helvetica";
-@font-face {
-  font-family: "Couture";
-  src: url("../assets/fonts/couture-bld.otf");
-}
 
 .main_container_intro {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 1fr .3fr;
+  grid-template-rows: 1fr 0.3fr;
   grid-auto-rows: minmax(50px, 1fr);
 
   .image {
@@ -72,7 +65,7 @@ $font2: "Helvetica";
       margin-bottom: 20px;
       background-color: $color1;
       width: 50px;
-      height: 5px;
+      height: 3px;
     }
     .title {
       margin-bottom: 20px;
@@ -108,12 +101,18 @@ $font2: "Helvetica";
     text-align: center;
     align-items: center;
     border: 3px solid $color1;
-    transition: transform 0.3s,;
+    transition: transform 0.3s;
+    a {
+      text-decoration: none;
+      color: $color1;
+    }
   }
-  .CTA:hover{
+  .CTA:hover {
     background-color: $color1;
-    color: white;
     transform: scale(1.1);
+    a {
+      color: white;
+    }
   }
 }
 </style>

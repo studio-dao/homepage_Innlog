@@ -65,12 +65,7 @@ export default {
 $color1: #0078b5;
 $color2: white;
 $color3: black;
-$font1: "Courier New", Courier, monospace;
 $font2: "Helvetica";
-@font-face {
-  font-family: "Couture";
-  src: url("../assets/fonts/couture-bld.otf");
-}
 
 .solution_main_container {
   position: relative;
@@ -110,7 +105,7 @@ $font2: "Helvetica";
       font-family: $font2;
       font-weight: bold;
       letter-spacing: 2px;
-      font-size: 3em;
+      font-size: 2.5em;
     }
   }
 
