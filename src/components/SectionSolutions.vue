@@ -117,6 +117,7 @@ $font2: "Helvetica";
     align-items: center;
     .solution_carrousel_content {
       display: flex;
+      height: 300px;
       flex-direction: column;
       align-items: center;
       text-align: center;
@@ -131,14 +132,100 @@ $font2: "Helvetica";
         padding: 20px;
         font-size: 18px;
         font-weight: 300;
-        .solution_carrousel_content_text_div_parag{
+        .solution_carrousel_content_text_div_parag {
           line-height: 1em;
         }
 
         .solution_carrousel_content_text_div_title {
           color: $color1;
           font-size: 14px;
-           font-weight: 700;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+//  TABLET AND MOBILE
+@media (max-width: 768px) {
+  $color1: #0078b5;
+  $color2: white;
+  $color3: black;
+  $font2: "Helvetica";
+
+  .solution_main_container {
+    position: relative;
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+    .solution_separateur {
+      width: 50px;
+      background-color: $color1;
+      height: 3px;
+      margin: 20px 0px 50px 0px;
+    }
+    .solution_carrousel_flecheLft {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+    }
+    .solution_carrousel_flecheRght {
+      position: absolute;
+      top: 50%;
+      right: -10px;
+    }
+    // CONTAINER TEXTE
+
+    .solution_container_texte {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      .solution_title {
+        display: grid;
+        margin-bottom: 10px;
+        grid-column: 1/7;
+        margin-bottom: 50px;
+        justify-content: center;
+        font-family: $font2;
+        font-weight: bold;
+        letter-spacing: 2px;
+        font-size: 2em;
+      }
+    }
+
+    // CONTAINER CAROUSEL
+    .solution_caroussel_container {
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .solution_carrousel_content {
+        display: flex;
+        height: 300px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #eee;
+        .solution_carrousel_content_div_image {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .solution_carrousel_content_text_div {
+          padding: 20px;
+          font-size: 18px;
+          font-weight: 300;
+          .solution_carrousel_content_text_div_parag {
+            line-height: 1em;
+          }
+
+          .solution_carrousel_content_text_div_title {
+            color: $color1;
+            font-size: 14px;
+            font-weight: 700;
+          }
         }
       }
     }

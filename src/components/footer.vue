@@ -63,11 +63,6 @@
 export default {
   name: "Header",
 
-  data() {
-    return {
-      timestamp: "",
-    };
-  },
 
 };
 </script>
@@ -96,6 +91,7 @@ $font2: "Helvetica";
     .footer_col {
       ul {
         list-style: none;
+        padding: 0px;
         a {
           font-family: "Helvetica";
 
@@ -109,6 +105,12 @@ $font2: "Helvetica";
         }
       }
     }
+    .header_div_burger{
+      display: none;
+    }
+    .header_nav_modale{
+      display: none;
+    }
   }
   .footer_row_2 {
     padding: 1em;
@@ -116,11 +118,105 @@ $font2: "Helvetica";
     justify-content: center;
     background-color: $color1;
     width: 100vw;
-    img{
+    img {
       width: 50px;
       margin: 0px 5px;
     }
   }
+}
+//  TABLET AND MOBILE
+@media (max-width: 768px) {
+  $color1: #0078b5;
+  $color2: white;
+  $font2: "Helvetica";
 
+  .footer_main_container {
+    position: relative;
+    width: 100vw;
+    .footer_row_1 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background-color: $color1;
+      width: 100vw;
+      .footer_logo {
+        display: grid;
+        grid-column: 2/3;
+        width: 100%;
+        align-items: center;
+        img {
+          width: 50%;
+        }
+      }
+      .footer_col {
+        display: grid;
+        grid-column: 2;
+        ul {
+          list-style: none;
+          text-align: center;
+          margin: 0px;
+          a {
+            font-family: "Helvetica";
+            font-weight: 500;
+            text-decoration: none;
+            color: $color2;
+            font-size: 16px;
+            li {
+              margin: 20px 0px;
+            }
+          }
+        }
+      }
+      .header_div_burger {
+        display: grid;
+        grid-row: 1;
+        grid-column: 3;
+        justify-items: right;
+
+
+        .header_div_burger_img {
+          width: 15%;
+        }
+      }
+      .header_nav_modale {
+      display: flex;
+      position: absolute;
+      top: 8%;
+      right: 0px;
+      width: 20%;
+      height: auto;
+      background-color: $color2;
+      ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        align-items: left;
+        li {
+          margin: 10px;
+          a {
+            text-decoration: none;
+            color: $color1;
+            font-family: $font2;
+            font-size: 0.8em;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    }
+    
+    .footer_row_2 {
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      background-color: $color1;
+      width: 100vw;
+      img {
+        width: 50px;
+        margin: 0px 5px;
+      }
+    }
+  }
 }
 </style>

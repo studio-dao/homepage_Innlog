@@ -2,11 +2,11 @@
   <div class="main_container_intro">
     <div class="image"></div>
     <div class="section_intro_droite">
-      <div class="separateur"></div>
+      <div class="separateur_1"></div>
       <div class="title">
         CONNECTING PEOPLE & DIGITAL
       </div>
-      <div class="separateur"></div>
+      <div class="separateur_2"></div>
       <p>
         Innlog accompagne et développe votre performance numérique grâce à des
         solutions adaptées et un accompagnement global, déployés dans le temps.
@@ -22,7 +22,9 @@
         </p>
       </a>
     </div>
-    <div class="CTA"><a href="#">DÉCOUVRIR LA MÉTHODE INNLOG</a></div>
+    <div class="SectionIntro_CTA">
+      <div class="CTA"><a href="#">DÉCOUVRIR LA MÉTHODE INNLOG</a></div>
+    </div>
   </div>
 </template>
 
@@ -45,23 +47,21 @@ $font2: "Helvetica";
 
 .main_container_intro {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 1fr 0.3fr;
-  grid-auto-rows: minmax(50px, 1fr);
+      padding-top: 7.4%;
+  grid-template-columns: repeat(2, 1fr);
 
   .image {
     display: grid;
-    grid-column: 1/6;
     background: url("~@/assets/images/cover.png");
     background-size: cover;
+    height: auto;
   }
   .section_intro_droite {
     display: grid;
-    grid-column: 6/12;
     padding-top: 10px;
     padding-left: 50px;
     align-items: center;
-    .separateur {
+    .separateur_1 {
       margin-bottom: 20px;
       background-color: $color1;
       width: 50px;
@@ -89,29 +89,125 @@ $font2: "Helvetica";
       }
     }
   }
-  .CTA {
+  .SectionIntro_CTA {
     display: grid;
-    margin: 50px 0px;
-    padding: 10px;
-    grid-column: 4/8;
-    font-family: "Helvetica";
-    font-weight: bold;
-    font-size: 1.2em;
-    color: $color1;
+    grid-row: 2;
+    grid-column: 1/3;
     text-align: center;
     align-items: center;
-    border: 3px solid $color1;
-    transition: transform 0.3s;
-    a {
-      text-decoration: none;
+    justify-items: center;
+    .CTA {
+      width: 30%;
+      margin: 50px 0px;
+      padding: 10px;
+      font-family: "Helvetica";
+      font-weight: bold;
+      font-size: 1.2em;
       color: $color1;
+      border: 3px solid $color1;
+      transition: transform 0.3s;
+      a {
+        text-decoration: none;
+        color: $color1;
+      }
+    }
+    .CTA:hover {
+      background-color: $color1;
+      transform: scale(1.1);
+      a {
+        color: white;
+      }
     }
   }
-  .CTA:hover {
-    background-color: $color1;
-    transform: scale(1.1);
-    a {
-      color: white;
+}
+//  TABLET AND MOBILE
+@media (max-width: 768px) {
+  $color1: #0078b5;
+  $color2: white;
+  $color3: black;
+  $font2: "Helvetica";
+
+  .main_container_intro {
+    display: flex;
+
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+    .image {
+      min-width: 100%;
+      min-height:400px;
+      background: url("~@/assets/images/cover.png");
+      background-size: cover;
+    }
+    
+    .section_intro_droite {
+      padding-top: 10px;
+      padding-left: 50px;
+      align-items: center;
+      .separateur_1{
+        margin: 20px 0px 20px 0px;
+        background-color: $color1;
+        width: 50px;
+        height: 3px;
+      }
+      .title {
+        margin-bottom: 20px;
+        max-width: 500px;
+        line-height: 40px;
+        font-family: $font2;
+        font-weight: bold;
+        font-size: 2em;
+        text-align: left;
+      }
+       .separateur_2{
+        margin: 0px 0px 20px 0px;
+        background-color: $color1;
+        width: 50px;
+        height: 3px;
+      }
+      a {
+        text-decoration: none;
+        p {
+          font-family: "Helvetica";
+          font-size: 1em;
+          color: $color1;
+          transition: letter-spacing 0.5s;
+        }
+        p:hover {
+          letter-spacing: 2px;
+        }
+      }
+    }
+    .SectionIntro_CTA {
+      display: grid;
+      width: 700px;
+      text-align: center;
+      align-items: center;
+      justify-items: center;
+      .CTA {
+        width: 50%;
+        margin: 50px 0px;
+        padding: 10px;
+        font-family: "Helvetica";
+        font-weight: bold;
+        font-size: 1em;
+        color: $color1;
+        border: 3px solid $color1;
+        transition: transform 0.3s;
+        a {
+          text-decoration: none;
+          color: $color1;
+        }
+      }
+      .CTA:hover {
+        background-color: $color1;
+        transform: scale(1.1);
+        a {
+          color: white;
+        }
+      }
     }
   }
 }
